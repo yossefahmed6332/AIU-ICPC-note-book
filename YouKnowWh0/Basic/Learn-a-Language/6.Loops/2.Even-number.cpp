@@ -1,36 +1,17 @@
 #include <iostream> 
-#include <vector>
  using namespace std ; 
  void solve (){ 
-//note : learn vector in C++ before solving this problem 
-int n ; //length of vector 
-cin >> n ;
-vector<int> v(n) ; //create a vector of length n
-
-int even = 0 ; //initialize a variable to count the number of even numbers in the vector
-int odd = 0 ; //initialize a variable to count the number of odd numbers in the vector
-int positive = 0 ;//initialize a variable to count the number of positive numbers in the vector
-int negative = 0 ;//initialize a variable to count the number of negative numbers in the vector
-
-
-for (int i =0 ; i<n ; i++){//loop from 0 to n-1 and read the elements of the vector 
-    cin >> v[i] ;
-
-
-//I used this if-else pattern to get you thinking. Now, think about this: why did I choose this pattern?    
-if (v[i]%2==0)
-        even ++; 
-    else 
-        odd++; 
-    
-    if (v[i]>0)
-        positive++; 
-    else  if (v[i]<0)
-    negative++;
-
-}
-
-cout <<  "Even: " << even <<"\nOdd: "<<odd <<"\nPositive: "<<positive<<"\nNegative: "<<negative;
+//use the same logic as the previous problem to print all even numbers from 1 to N then for loop start from 1 to N 
+    int n ; 
+    cin >> n; 
+    bool evenFound = false; // Flag to track if any even number is found
+    for (int i =1 ; i<=n;i++)//start from i =1 , if i<=n then increment i by 1  and continue the loop 
+        if (i%2==0) {//check if the number is even or not by using modulus operator
+            evenFound = true; // Set the flag to true if an even number is found
+            cout << i << endl ;
+        }
+    if (!evenFound) // If no even number was found, print "No Even Numbers"
+        cout << -1 << endl;  
  }
  int main () {
     //the next two lines are used to speed up the input and output operations in C++. 

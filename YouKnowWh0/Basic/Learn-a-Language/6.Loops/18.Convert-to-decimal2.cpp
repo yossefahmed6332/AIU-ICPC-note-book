@@ -4,11 +4,8 @@
 #include <string>
 #include <cmath>
 using namespace std;
-int main () {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-    //take input
+void solve (){
+   //take input
     int  t , n ;
     cin >> t;
     while (t--) {
@@ -33,5 +30,11 @@ int main () {
         cout << res << endl;
 
     }
+}
+int main () {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    solve()
+ 
 
 }

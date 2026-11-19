@@ -13,4 +13,3 @@ int main () {
     cin.tie(nullptr);
     solve() ;
     }
-

@@ -16,7 +16,7 @@ for (int i = 0 ; i < n ; i++) {
         }
 
     }
-    cout << max << endl ;   
+cout << max << endl ; //print the maximum number in the array
 
 }
 int main () {
